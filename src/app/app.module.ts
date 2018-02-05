@@ -11,6 +11,8 @@ import { AlertViewComponent } from './alert-view/alert-view.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { TabComponent } from './tab/tab.component';
 import { SimpleAlertViewComponent } from './simple-alert-view/simple-alert-view.component';
+import { TimerNativeComponent } from 'app/timer-native/timer.component';
+import { TimerNoneComponent } from 'app/timer-none/timer.component';
 
 
 
@@ -23,7 +25,9 @@ import { SimpleAlertViewComponent } from './simple-alert-view/simple-alert-view.
     AlertViewComponent,
     TabsComponent,
     TabComponent,
-    SimpleAlertViewComponent
+    SimpleAlertViewComponent,
+    TimerNativeComponent,
+    TimerNoneComponent
   ],
   imports: [
     BrowserModule,

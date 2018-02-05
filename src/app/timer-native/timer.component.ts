@@ -1,15 +1,16 @@
-import { Component, OnInit, OnDestroy, Input, Output, EventEmitter, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, Output, EventEmitter, ChangeDetectionStrategy, ChangeDetectorRef, ViewEncapsulation } from '@angular/core';
 import { TimerService } from 'app/timer/timer.service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
-  selector: 'app-timer',
+  selector: 'app-timer-native',
   templateUrl: './timer.component.html',
   styleUrls: ['./timer.component.scss'],
   providers: [TimerService],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.Native
 })
-export class TimerComponent implements OnInit, OnDestroy {
+export class TimerNativeComponent implements OnInit, OnDestroy {
 
   @Output() onComplete = new EventEmitter<void>();
   @Input() init: number = 20;
